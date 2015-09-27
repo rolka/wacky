@@ -1,1 +1,6 @@
-console.log('\'Allo \'Allo!');
+(function() {
+  'use strict';
+
+  console.log(Wacky.templates.foo());
+
+})();
