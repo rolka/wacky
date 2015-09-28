@@ -1,2 +1,172 @@
 // bower:scss
 // endbower
+
+$white:        #EEEEEE;
+$grey:         #DDDDDD;
+
+$purple:       #6154A4;
+$light-purple: lighten($purple, 20%);
+$dark-purple:  darken($purple, 20%);
+$black:        darken($dark-purple, 15%);
+
+$transparent: rgba(0,0,0,.3);
+
+body {
+  margin: 0;
+  color: $black;
+  font-weight: 300;
+  text-align: center;
+  background: $grey;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 100px 200px;
+}
+
+a {
+  color: $purple;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $light-purple;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1200px;
+}
+
+.logo {
+  background: $purple;
+}
+
+.footer {
+  padding: 20px;
+  color: $white;
+  background: $dark-purple;
+}
+
+.photos {
+  overflow: hidden;
+
+  li {
+    width: 20%;
+    float: left;
+    height: 220px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      top: 50%;
+      width: 120%;
+      position: relative;
+      transform: translateY(-50%);
+      transition: all .5s ease-in-out;
+    }
+
+    i {
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      font-size: 60px;
+      position: absolute;
+      background: $transparent;
+      transition: all .5s ease-in-out;
+    }
+
+    i:before {
+      vertical-align: -55px;
+    }
+  }
+
+  li:hover {
+    img {
+      width: 140%;
+    }
+
+    i {
+      opacity: 1;
+    }
+  }
+}
+
+.opening {
+  overflow: hidden;
+
+  .left {
+    width: 50%;
+    float: left;
+  }
+}
+
+.contact {
+  overflow: hidden;
+  text-align: left;
+
+  .left {
+    width: 60%;
+    float: left;
+  }
+
+  .right {
+    width: 40%;
+    float: left;
+  }
+
+  p {
+    max-width: 350px;
+  }
+
+  form {
+    margin: 15px 0 30px 0;
+  }
+
+  input,
+  textarea {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+  }
+
+  textarea {
+    height: 130px;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    color: $white;
+    cursor: pointer;
+    background: $dark-purple;
+  }
+
+  input[type=submit]:hover {
+    background: $purple;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+}
